@@ -1,0 +1,133 @@
+.text-colour {
+
+  &.text-colour-orange {
+
+    color: $orange;
+
+    a {
+      color: $orange;
+
+      &:hover {
+        color: $orange;
+      }
+
+    }
+
+  }
+
+  &.text-colour-black {
+
+    color: $black;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $black;
+      }
+
+    }
+
+  }
+
+  a.text-colour-black {
+
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+
+  }
+
+  &.text-colour-white {
+
+    color: $white !important;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+
+    }
+
+  }
+
+  a.text-colour-white {
+
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+
+  }
+
+  &.text-colour-grey {
+
+    color: $grey;
+
+    a {
+      color: $grey;
+
+      &:hover {
+        color: $grey;
+      }
+
+    }
+
+  }
+
+  a.text-colour-grey {
+
+    color: $grey;
+
+    &:hover {
+      color: $grey;
+    }
+
+  }
+
+  &.text-colour-grey-dark {
+
+    color: $grey-dark;
+
+    a {
+      color: $grey-dark;
+
+      &:hover {
+        color: $grey-dark;
+      }
+
+    }
+
+  }
+
+  &.text-colour-grey-lightest {
+
+    color: $grey-lightest;
+
+    a {
+      color: $grey-lightest;
+
+      &:hover {
+        color: $grey-lightest;
+      }
+
+    }
+
+  }
+
+  a.text-colour-grey-dark {
+
+    color: $grey-dark;
+
+    &:hover {
+      color: $grey-dark;
+    }
+
+  }
+
+}

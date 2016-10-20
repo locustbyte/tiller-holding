@@ -1,0 +1,28 @@
+.border {
+
+  &.border-solid {
+    border-style: solid;
+  }
+
+  &.border-md {
+    border-width: 8px;
+  }
+
+  &.border-sm {
+    border-width: 5px;
+  }
+
+  &.border-lg {
+    border-width: 10px;
+  }
+
+  &.border-white {
+    border-color: $white;
+  }
+
+  &.border-zero {
+    border-style: solid;
+    @include border(0);
+  }
+
+}

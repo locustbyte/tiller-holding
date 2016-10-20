@@ -1,0 +1,33 @@
+.colour {
+
+  * {
+    border-color: inherit;
+    color: inherit;
+  }
+
+  &.colour-black {
+    background-color: $black;
+    color: $white;
+    &.colour-hover {
+      &:hover {
+        color: $white;
+        text-decoration: none;
+        background-color: $black;
+      }
+    }
+  }
+
+  &.colour-white {
+    background-color: $white;
+    color: $black;
+
+    &.colour-hover {
+      &:hover {
+        color: lighten($black, 20%);
+        text-decoration: none;
+        background-color: darken($white, 20%);
+      }
+    }
+  }
+
+}

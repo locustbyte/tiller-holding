@@ -1,0 +1,27 @@
+.display {
+
+  &.display-block {
+    display: block;
+  }
+
+  &.display-table {
+    display: table;
+  }
+
+  &.display-table-cell {
+    display: table-cell;
+  }
+
+  &.display-inline-block {
+    display: inline-block;
+  }
+
+  &.display-vertical-middle {
+    vertical-align: middle;
+  }
+
+  &.display-vertical-bottom {
+    vertical-align: bottom;
+  }
+
+}

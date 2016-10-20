@@ -1,0 +1,84 @@
+.position {
+
+  &.position-relative {
+    position: relative;
+  }
+
+  &.position-absolute {
+    position: absolute;
+
+    &.position-bottom {
+      bottom: 0px;
+      margin-bottom: 0px;
+    }
+
+    &.position-bottom-right {
+      bottom: 0px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
+
+    &.position-bottom-left {
+      bottom: 0px;
+      left: 0px;
+      margin-bottom: 0px;
+    }
+
+    &.position-bottom-right-outside-right {
+      bottom: -40px;
+      right: 0px;
+      margin-bottom: 0px;
+    }
+
+    &.position-inside-form-control {
+      top: 12px;
+      right: 12px;
+      left: auto;
+    }
+
+    &.position-bottom-right-padded {
+      bottom: 15px;
+      right: 15px;
+      margin-bottom: 0px;
+    }
+
+    &.position-top {
+      top: 0;
+    }
+
+    &.position-top-right {
+      top: 0;
+      right: 0;
+    }
+
+    &.position-canvas {
+      top: 60px;
+      left: auto;
+      margin-left: 60px;
+    }
+
+    &.position-center-shape-xl {
+      left: 400px;
+    }
+
+    &.position-off-piste {
+      top: -30000px;
+      left: -30000px;
+    }
+
+    &.position-right{
+      right: 0;
+      margin-top: 20px;
+      margin-right: 40px;
+    }
+
+    &.position-right-no-margin{
+      right: 0;
+    }
+    &.position-left-no-margin{
+      left: 0;
+    }
+
+  }
+
+}

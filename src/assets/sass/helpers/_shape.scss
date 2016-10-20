@@ -1,0 +1,69 @@
+.shape {
+
+  display: table;
+  text-align: center;
+
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    color: inherit;
+  }
+
+  &.shape-round {
+    @include border-radius(100%);
+  }
+
+  &.shape-sm {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.shape-md {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.shape-lg {
+    width: 96px;
+    height: 96px;
+  }
+
+  &.shape-xl {
+    width: 285px;
+    height: 285px;
+  }
+
+  &.shape-orange {
+    background-color: $orange;
+
+    span {
+      color: $white;
+    }
+  }
+
+}
+
+.text-center {
+  .shape {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.shape-labels {
+  .shape {
+
+  }
+
+  &.shape-labels-sm {
+    .shape-label {
+      margin-left: 10px;
+      margin-top: 7px;
+      &.shape-label-wrapped {
+        margin-top: 0px;
+        width: 75%;
+      }
+    }
+  }
+
+}

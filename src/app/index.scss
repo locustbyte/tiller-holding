@@ -1,0 +1,619 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import "../assets/sass/animatewithsass/animate";
+body{
+	background-color: #262626 !important;
+}
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+$black: #000000;
+$white: #ffffff;
+
+$blue: #3065c5;
+$yellow: #f6c66e;
+
+$grey-lightest: #f5f5f5;
+$grey-lighter: #e5e5e5;
+$grey: #b4b4b4;
+$grey-dark: #666666;
+$grey-darkest: #262626;
+
+$orange: #df6e16;
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+/* fonts */
+@font-face {
+  font-family: 'Mark Pro Light';
+  src: url('../assets/fonts/MarkPro-Light.otf') format('opentype'),
+  		 url('../assets/fonts/MarkPro-Light.ttf')  format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark Pro Book';
+  src: url('../assets/fonts/MarkPro-Book.otf') format('opentype'),
+  		 url('../assets/fonts/MarkPro-Book.ttf')  format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark Pro Medium';
+  src: url('../assets/fonts/MarkPro-Medium.otf') format('opentype'),
+  		 url('../assets/fonts/MarkPro-Medium.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mark Pro Bold';
+  src: url('../assets/fonts/MarkPro-Bold.otf') format('opentype'),
+  		 url('../assets/fonts/MarkPro-Bold.ttf')  format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.stay-btns{
+	position: fixed;
+    bottom: 30px;
+    right: 0;
+}
+
+.head-text{
+	font-family: 'Mark Pro Light', arial;
+	color: white;
+	font-size: 50px;
+}
+.sub-text{
+	font-family: 'Mark Pro Light', arial;
+	color: white;
+	font-size: 25px;	
+}
+
+.btn-orange-outline{
+	border: 3px solid #F06617;
+	border-radius: 100px;
+	font-family: 'Mark Pro Light', arial;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	// padding-left: 50px;
+	// padding-right: 50px;
+	margin-right: 10px;
+	min-width: 250px;
+	text-align: center;
+	&.small{
+		min-width: 250px;
+		display: inline;
+		padding-top: 10px;
+    	padding-bottom: 10px;
+    	border: 1px solid #F06617;
+	}
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.btn-orange-full{
+	background-color: #81B03A;
+	border-radius: 100px;
+	font-family: 'Mark Pro Light', arial;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	// padding-left: 50px;
+	// padding-right: 50px;
+	margin-left: 10px;
+	min-width: 250px;
+	text-align: center;
+	&.small{
+		min-width: 200px;
+		display: inline;
+		margin-left: 25px;
+		margin-right: 25px;
+		padding-top: 10px;
+    	padding-bottom: 10px;
+	}
+	&:hover{
+		color: white;
+		text-decoration: none;
+	}
+}
+
+/* helpers */
+.line-height{
+	&.lh25{
+		line-height: 25px;
+	}
+} 
+.padding{
+	&.padding-top-xs{
+		padding-top: 10px;
+	}
+	&.padding-top-sm{
+		padding-top: 30px;
+	}
+	&.padding-top-md{
+		padding-top: 60px;
+	}
+	&.padding-top-lg{
+		padding-top: 80px;
+	}
+
+	&.padding-bottom-xs{
+		padding-bottom: 10px;
+	}
+	&.padding-bottom-sm{
+		padding-bottom: 30px;
+	}
+	&.padding-bottom-md{
+		padding-bottom: 60px;
+	}
+	&.padding-bottom-lg{
+		padding-bottom: 80px;
+	}
+
+	&.padding-right-sm{
+		padding-right: 30px;
+	}
+	&.padding-right-md{
+		padding-right: 60px;
+	}
+}
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+.bg-black { background-color: #000; }
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+.text-orange{
+	color: $orange;
+}
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+.logo{
+	position: fixed;
+	top: 40px;
+	left: 50px;
+	@include fadeInDown();
+}
+
+.mousey{
+	position: absolute;
+    bottom: 70px;
+    left: -50px;
+    right: 0;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+.scrollme{
+	@include fadeIn();
+	&.min{
+		@include fadeOut();
+		webkit-transition: all 1s ease-in;
+    	-webkit-animation-duration: 0.3s;
+	}	
+}
+
+.scroll-down{
+	left: 50%;
+    position: fixed;
+    bottom: 60px;
+}
+.scroll-down-text{
+	color: $orange;
+	@extend .padding, .padding-top-xs;
+}
+
+.text-center{
+
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+
+.content-bk{
+	background-color: $grey-darkest;
+	.type{
+		font-family: Mark Pro Book;
+		font-size: 26px;
+		color: #898989;
+		letter-spacing: 0px;
+		line-height: 33px;
+	}
+}
+
+.head-text{
+	@include fadeIn();
+	-webkit-transition: all 1s ease-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+
+    -moz-transition: all 1s ease-in;
+    -moz-transition-duration: 1s;
+
+    -o-transition: all 1s ease-in;
+    -o-transition-duration: 1s;
+}
+.sub-text{
+	@include fadeIn();
+	-webkit-transition: all 1s ease-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.5s;
+
+    -moz-transition: all 1s ease-in;
+    -moz-transition-duration: 1s;
+
+    -o-transition: all 1s ease-in;
+    -o-transition-duration: 1s;
+}
+
+.main-st-btn{
+	@include zoomIn();
+	-webkit-transition: all 1s ease-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.8s;
+
+    -moz-transition: all 1s ease-in;
+    -moz-transition-duration: 1s;
+
+    -o-transition: all 1s ease-in;
+    -o-transition-duration: 1s;
+}
+.main-try-btn{
+	@include zoomIn();
+	-webkit-transition: all 1s ease-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 1.8s;
+
+    -moz-transition: all 1s ease-in;
+    -moz-transition-duration: 1s;
+
+    -o-transition: all 1s ease-in;
+    -o-transition-duration: 1s;
+}
+.mouse-indicator{
+	@include fadeInUp();
+	-webkit-transition: all 1s ease-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+
+    -moz-transition: all 1s ease-in;
+    -moz-transition-duration: 1s;
+
+    -o-transition: all 1s ease-in;
+    -o-transition-duration: 1s;	
+}
+.mouse-indicator-text{
+	@include fadeIn();
+	-webkit-transition: all 1s ease-in;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+
+    -moz-transition: all 1s ease-in;
+    -moz-transition-duration: 1s;
+
+    -o-transition: all 1s ease-in;
+    -o-transition-duration: 1s;	
+}
+
+.track-text{
+	font-family: 'Mark Pro Light', arial;
+	font-size: 48px;
+	color: #FFFFFF;
+	letter-spacing: 0px;
+	line-height: 54px;
+	@extend .padding, .padding-top-lg;
+	text-transform: uppercase;
+	width: 720px;
+}
+
+.slide1{
+	width: 100%;
+    min-height: 1000px;
+    background: transparent;
+	//background: url(../assets/images/intro-img.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.slide2{
+	width: 100%;
+    min-height: 500px;
+    background: transparent;
+	//background: url(../assets/images/phone.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.slide3{
+	width: 100%;
+    min-height: 500px;
+    background: transparent;
+	//background: url(../assets/images/numbers.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.slide4{
+	width: 100%;
+    min-height: 500px;
+    background: transparent;
+	//background: url(../assets/images/eye.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.slide5{
+	width: 100%;
+    min-height: 500px;
+    background: transparent;
+	//background: url(../assets/images/girl.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.slide-end{
+	width: 100%;
+    min-height: 100px;
+    background-color: #262626;
+	//background: url(../assets/images/girl.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.circs-o{
+	width: 100%;
+    min-height: 500px;
+    background: transparent;
+
+	//background: url(../assets/images/girl.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@media only screen and (max-width: 769px) { 
+	.track-text {
+	    font-family: 'Mark Pro Light', arial;
+	    font-size: 2.2em;
+	    color: #FFFFFF;
+	    letter-spacing: 0px;
+	    line-height: 54px;
+	    text-transform: uppercase;
+	    width: 100%;
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+    
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+   	 /* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+    	.btn-orange-full {
+		    background-color: #81B03A;
+		    border-radius: 100px;
+		    font-family: 'Mark Pro Light', arial;
+		    color: white;
+		    font-size: 15px;
+		    padding: 15px;
+		    margin-left: 10px;
+		    max-width: 250px;
+		    text-align: center;
+		    margin: 0 auto;
+		}
+		.btn-orange-outline{
+			border: 3px solid #F06617;
+			border-radius: 100px;
+			font-family: 'Mark Pro Light', arial;
+			color: white;
+			font-size: 15px;
+			padding: 15px;
+			margin-right: 10px;
+			max-width: 250px;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			&.small{
+				min-width: 250px;
+				display: inline;
+				padding-top: 10px;
+		    	padding-bottom: 10px;
+		    	border: 1px solid #F06617;
+			}
+			&:hover{
+				color: white;
+				text-decoration: none;
+			}
+		}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+    	.btn-orange-full {
+		    background-color: #81B03A;
+		    border-radius: 100px;
+		    font-family: 'Mark Pro Light', arial;
+		    color: white;
+		    font-size: 15px;
+		    padding: 15px;
+		    margin-left: 10px;
+		    max-width: 250px;
+		    text-align: center;
+		    margin: 0 auto;
+		}
+		.btn-orange-outline{
+			border: 3px solid #F06617;
+			border-radius: 100px;
+			font-family: 'Mark Pro Light', arial;
+			color: white;
+			font-size: 15px;
+			padding: 15px;
+			margin-right: 10px;
+			max-width: 250px;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			&.small{
+				min-width: 250px;
+				display: inline;
+				padding-top: 10px;
+		    	padding-bottom: 10px;
+		    	border: 1px solid #F06617;
+			}
+			&:hover{
+				color: white;
+				text-decoration: none;
+			}
+		}
+		.head-text{
+			font-size:30px;
+		}
+		.sub-text{
+			font-size: 15px;
+		}
+
+		.logo-holder{
+			width: 100%;
+			text-align: center;
+			.logo{
+				position: absolute;
+			}
+		}
+
+		.mousey{
+			position: absolute;
+    		bottom: 70px;
+		    left: 0;
+		    right: 0;
+		    width: 100px;
+		    margin: 0 auto;
+		    text-align: center;
+		}
+		.mobile-pad{
+			padding-top: 20px !important;
+		}
+
+		.track-text {
+		    font-family: 'Mark Pro Book', arial;
+		    font-size: 1.8em;
+		    color: #FFFFFF;
+		    letter-spacing: 0px;
+		    line-height: 34px;
+		    text-transform: uppercase;
+		    width: 100%;
+		    text-align: center;
+		    padding-top: 30px;
+		}
+		.content-bk .type{
+			font-family: Mark Pro Book;
+		    font-size: 16px;
+		    color: #898989;
+		    letter-spacing: 0px;
+		    line-height: 23px;
+		    padding: 50px;
+			text-align: center;
+		}
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        .btn-orange-full {
+		    background-color: #81B03A;
+		    border-radius: 100px;
+		    font-family: 'Mark Pro Light', arial;
+		    color: white;
+		    font-size: 15px;
+		    padding: 15px;
+		    margin-left: 10px;
+		    max-width: 250px;
+		    text-align: center;
+		    margin: 0 auto;
+		}
+		.btn-orange-outline{
+			border: 3px solid #F06617;
+			border-radius: 100px;
+			font-family: 'Mark Pro Light', arial;
+			color: white;
+			font-size: 15px;
+			padding: 15px;
+			margin-right: 10px;
+			max-width: 250px;
+			text-align: center;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			&.small{
+				min-width: 250px;
+				display: inline;
+				padding-top: 10px;
+		    	padding-bottom: 10px;
+		    	border: 1px solid #F06617;
+			}
+			&:hover{
+				color: white;
+				text-decoration: none;
+			}
+		}
+		.head-text{
+			font-size:30px;
+		}
+    }
