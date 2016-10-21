@@ -45,12 +45,12 @@
 
         var script = document.createElement("script");
         script.type = "text/javascript";
-        if(callback)script.onload=callback;
+        if(callback)script.onload=callback
         document.getElementsByTagName("head")[0].appendChild(script);
         script.src = src;
     }
 
-    $scope.myPattern = 'assets/images/phone.jpg';
+    $scope.myPattern = 'assets/images/circs-o.png';
 
     angular.element(document).ready(function () {
         $('.slide1').css('min-height',$(window).height())
@@ -62,7 +62,7 @@
         $('.slide3').parallax({imageSrc: 'assets/images/numbers.jpg'});
         $('.slide2').parallax({imageSrc: 'assets/images/phone.jpg'});
 
-        $('.circs-o').parallax({imageSrc: 'assets/images/circs-o.png'});
+        //$('.circs-o').parallax({imageSrc: 'assets/images/circs-o.png'});
         //}, 1000);
         //start parallaxes
         
@@ -71,21 +71,23 @@
     
     });
 
-    $scope.scrollPos = 0;
+//    $scope.scrollPos = 0;
 
-    $window.onscroll = function(){
-        $scope.scrollPos = document.body.scrollTop || document.documentElement.scrollTop || 0;
-        $scope.$apply(); //or simply $scope.$digest();
-    };
+    // $window.onscroll = function(){
+    //     $scope.scrollPos = document.body.scrollTop || document.documentElement.scrollTop || 0;
+    //     $scope.$apply(); //or simply $scope.$digest();
+    // };
 
     $document.on('scroll', function() {
       // do your things like logging the Y-axis
-      console.log($window.scrollY)
 
       if ( $window.scrollY > 550 ) {
         $(".stay-btns").removeClass("hide")
+        $(".floating-circles").removeClass("off").addClass('on');
+        
       } else {
         $(".stay-btns").addClass("hide")
+        $(".floating-circles").removeClass('on').addClass("off")
       }
 
 
