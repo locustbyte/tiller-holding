@@ -11,7 +11,7 @@ angular.module('tillerHolding')
                 // Initial Settings
                 // --------------------------------------------------------
 
-                var colours = ['#df6e16','#633e21','#423124'],
+                var colours = ['#3d3b3b', '#1d1a1a','#df6e16','#ba6019','#b15c1a','#2e2d2d', '#3d3b3b', '#1d1a1a'],
                     strokeWidth = 1,
                     lockFps = true,
                     fps = 30;
@@ -161,7 +161,7 @@ angular.module('tillerHolding')
                     return {
                         x: Math.random() * width, 
                         y: Math.random() * height,
-                        r: Math.floor(Math.random() * 120) + 1,
+                        r: Math.floor(Math.random() * 90) + 1,
                         colour: colours[Math.floor(Math.random() * 3)],
                         vector: [
                             i%2 ? -randNormal() : randNormal(),

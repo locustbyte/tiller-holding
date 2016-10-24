@@ -83,11 +83,15 @@
 
       if ( $window.scrollY > 550 ) {
         $(".stay-btns").removeClass("hide")
-        $(".floating-circles").removeClass("off").addClass('on');
+        $(".floating-circles").removeClass("off hide").addClass('on');
         
       } else {
         $(".stay-btns").addClass("hide")
         $(".floating-circles").removeClass('on').addClass("off")
+
+        $timeout(function() {
+          $(".floating-circles").addClass("hide")
+        }, 500);
       }
 
 
